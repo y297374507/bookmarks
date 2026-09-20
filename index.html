@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的常用导航</title>
+  <meta name="description" content="个人快速入口 · 每天自动更新">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔗</text></svg>">
+  <style>
+    :root {
+      --bg: #0f1115;
+      --card: #1a1d24;
+      --text: #e6e8ec;
+      --muted: #9aa0a6;
+      --accent: #5b8def;
+      --border: #2a2e38;
+      --hover: #252930;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      min-height: 100vh;
+      padding: 24px 16px 48px;
+    }
+    .container { max-width: 1100px; margin: 0 auto; }
+    header {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+    .subtitle {
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .search-box {
+      margin: 24px auto 0;
+      max-width: 420px;
+    }
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font-size: 1rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .search-box input:focus {
+      border-color: var(--accent);
+    }
+    .search-box input::placeholder { color: var(--muted); }
+    section {
+      margin-bottom: 32px;
+    }
+    .category-title {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 12px;
+      padding-left: 4px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 12px;
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 14px 16px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      text-decoration: none;
+      color: inherit;
+      transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    }
+    .card:hover {
+      background: var(--hover);
+      border-color: #3a4050;
+      transform: translateY(-1px);
+    }
+    .favicon {
+      width: 32px;
+      height: 32px;
+      border-radius: 8px;
+      background: #2a2e38;
+      flex-shrink: 0;
+      object-fit: contain;
+    }
+    .card-info {
+      min-width: 0;
+      flex: 1;
+    }
+    .card-name {
+      font-weight: 600;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .card-desc {
+      font-size: 0.8rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-top: 2px;
+    }
+    footer {
+      text-align: center;
+      margin-top: 48px;
+      color: var(--muted);
+      font-size: 0.8rem;
+    }
+    footer a { color: var(--accent); text-decoration: none; }
+    .hidden { display: none !important; }
+    @media (max-width: 600px) {
+      h1 { font-size: 1.5rem; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>我的常用导航</h1>
+      <p class="subtitle">个人快速入口 · 每天自动更新</p>
+      <div class="search-box">
+        <input type="search" id="search" placeholder="搜索网站..." autocomplete="off">
+      </div>
+    </header>
+
+    <main id="main">
+
+      <section>
+        <div class="category-title">常用工具</div>
+        <div class="grid">
+
+        <a class="card" href="https://www.google.com" target="_blank" rel="noopener"
+           data-name="google" data-desc="搜索引擎">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=www.google.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">Google</div>
+            <div class="card-desc">搜索引擎</div>
+          </div>
+        </a>
+        <a class="card" href="https://github.com" target="_blank" rel="noopener"
+           data-name="github" data-desc="代码托管">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">GitHub</div>
+            <div class="card-desc">代码托管</div>
+          </div>
+        </a>
+        <a class="card" href="https://chat.openai.com" target="_blank" rel="noopener"
+           data-name="chatgpt" data-desc="ai 对话">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=chat.openai.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">ChatGPT</div>
+            <div class="card-desc">AI 对话</div>
+          </div>
+        </a>
+        <a class="card" href="https://claude.ai" target="_blank" rel="noopener"
+           data-name="claude" data-desc="ai 助手">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=claude.ai&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">Claude</div>
+            <div class="card-desc">AI 助手</div>
+          </div>
+        </a>
+        <a class="card" href="https://x.com/i/grok" target="_blank" rel="noopener"
+           data-name="grok" data-desc="xai">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=x.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">Grok</div>
+            <div class="card-desc">xAI</div>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section>
+        <div class="category-title">开发相关</div>
+        <div class="grid">
+
+        <a class="card" href="https://stackoverflow.com" target="_blank" rel="noopener"
+           data-name="stack overflow" data-desc="编程问答">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=stackoverflow.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">Stack Overflow</div>
+            <div class="card-desc">编程问答</div>
+          </div>
+        </a>
+        <a class="card" href="https://developer.mozilla.org" target="_blank" rel="noopener"
+           data-name="mdn" data-desc="web 文档">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=developer.mozilla.org&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">MDN</div>
+            <div class="card-desc">Web 文档</div>
+          </div>
+        </a>
+        <a class="card" href="https://docs.python.org/zh-cn/3/" target="_blank" rel="noopener"
+           data-name="python 官方" data-desc="python 文档">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=docs.python.org&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">Python 官方</div>
+            <div class="card-desc">Python 文档</div>
+          </div>
+        </a>
+        <a class="card" href="https://leetcode.cn" target="_blank" rel="noopener"
+           data-name="leetcode" data-desc="算法练习">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=leetcode.cn&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">LeetCode</div>
+            <div class="card-desc">算法练习</div>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section>
+        <div class="category-title">资讯阅读</div>
+        <div class="grid">
+
+        <a class="card" href="https://sspai.com" target="_blank" rel="noopener"
+           data-name="少数派" data-desc="科技生活">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=sspai.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">少数派</div>
+            <div class="card-desc">科技生活</div>
+          </div>
+        </a>
+        <a class="card" href="https://www.v2ex.com" target="_blank" rel="noopener"
+           data-name="v2ex" data-desc="创意工作者社区">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=www.v2ex.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">V2EX</div>
+            <div class="card-desc">创意工作者社区</div>
+          </div>
+        </a>
+        <a class="card" href="https://news.ycombinator.com" target="_blank" rel="noopener"
+           data-name="hacker news" data-desc="科技新闻">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=news.ycombinator.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">Hacker News</div>
+            <div class="card-desc">科技新闻</div>
+          </div>
+        </a>
+        <a class="card" href="https://www.zhihu.com" target="_blank" rel="noopener"
+           data-name="知乎" data-desc="问答社区">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=www.zhihu.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">知乎</div>
+            <div class="card-desc">问答社区</div>
+          </div>
+        </a>
+        </div>
+      </section>
+      <section>
+        <div class="category-title">娱乐影音</div>
+        <div class="grid">
+
+        <a class="card" href="https://www.bilibili.com" target="_blank" rel="noopener"
+           data-name="bilibili" data-desc="视频网站">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=www.bilibili.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">Bilibili</div>
+            <div class="card-desc">视频网站</div>
+          </div>
+        </a>
+        <a class="card" href="https://www.youtube.com" target="_blank" rel="noopener"
+           data-name="youtube" data-desc="视频">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=www.youtube.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">YouTube</div>
+            <div class="card-desc">视频</div>
+          </div>
+        </a>
+        <a class="card" href="https://music.163.com" target="_blank" rel="noopener"
+           data-name="网易云音乐" data-desc="音乐">
+          <img class="favicon" src="https://www.google.com/s2/favicons?domain=music.163.com&sz=64" alt="" loading="lazy"
+               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <div class="card-info">
+            <div class="card-name">网易云音乐</div>
+            <div class="card-desc">音乐</div>
+          </div>
+        </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      最后更新：2026-09-20 21:45 · 由本地脚本自动生成 ·
+      <a href="https://github.com" target="_blank" rel="noopener">GitHub Pages</a>
+    </footer>
+  </div>
+
+  <script>
+    const searchInput = document.getElementById('search');
+    const cards = document.querySelectorAll('.card');
+    const sections = document.querySelectorAll('section');
+
+    searchInput.addEventListener('input', () => {
+      const q = searchInput.value.trim().toLowerCase();
+      cards.forEach(card => {
+        const name = card.dataset.name || '';
+        const desc = card.dataset.desc || '';
+        const match = !q || name.includes(q) || desc.includes(q);
+        card.classList.toggle('hidden', !match);
+      });
+      sections.forEach(sec => {
+        const visible = sec.querySelectorAll('.card:not(.hidden)').length > 0;
+        sec.classList.toggle('hidden', !visible);
+      });
+    });
+
+    // 键盘快捷键：按 / 聚焦搜索框
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement.tagName !== 'INPUT') {
+        e.preventDefault();
+        searchInput.focus();
+      }
+    });
+  </script>
+</body>
+</html>
