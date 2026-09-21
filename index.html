@@ -56,7 +56,11 @@
       transition: background 0.15s, border-color 0.15s, transform 0.15s;
     }
     .card:hover { background: var(--hover); border-color: #3a4050; transform: translateY(-1px); }
-    .favicon { width: 32px; height: 32px; border-radius: 8px; background: #2a2e38; flex-shrink: 0; object-fit: contain; }
+    .favicon {
+      width: 36px; height: 36px; border-radius: 10px;
+      background: #fff; flex-shrink: 0; object-fit: contain;
+      padding: 4px; box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    }
     .card-info { min-width: 0; flex: 1; }
     .card-name { font-weight: 600; font-size: 0.95rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
     .card-desc { font-size: 0.8rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 2px; }
@@ -86,8 +90,8 @@
 
         <a class="card" href="https://www.google.com" target="_blank" rel="noopener"
            data-name="google" data-desc="搜索引擎">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=www.google.com&sz=64" alt="" loading="lazy"
-               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <img class="favicon" src="https://logo.clearbit.com/google.com" alt="" loading="lazy"
+               onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=google.com&sz=64'; this.onerror=function(){this.src=\'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>\'}">
           <div class="card-info">
             <div class="card-name">Google</div>
             <div class="card-desc">搜索引擎</div>
@@ -95,8 +99,8 @@
         </a>
         <a class="card" href="https://github.com" target="_blank" rel="noopener"
            data-name="github" data-desc="代码托管">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=github.com&sz=64" alt="" loading="lazy"
-               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <img class="favicon" src="https://logo.clearbit.com/github.com" alt="" loading="lazy"
+               onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=github.com&sz=64'; this.onerror=function(){this.src=\'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>\'}">
           <div class="card-info">
             <div class="card-name">GitHub</div>
             <div class="card-desc">代码托管</div>
@@ -104,8 +108,8 @@
         </a>
         <a class="card" href="https://y297374507.github.io/TrendRadar/" target="_blank" rel="noopener"
            data-name="chatgpt" data-desc="热点新闻">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=y297374507.github.io&sz=64" alt="" loading="lazy"
-               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <img class="favicon" src="https://logo.clearbit.com/y297374507.github.io" alt="" loading="lazy"
+               onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=y297374507.github.io&sz=64'; this.onerror=function(){this.src=\'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>\'}">
           <div class="card-info">
             <div class="card-name">ChatGPT</div>
             <div class="card-desc">热点新闻</div>
@@ -113,8 +117,8 @@
         </a>
         <a class="card" href="https://claude.ai" target="_blank" rel="noopener"
            data-name="claude" data-desc="ai 助手">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=claude.ai&sz=64" alt="" loading="lazy"
-               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <img class="favicon" src="https://logo.clearbit.com/claude.ai" alt="" loading="lazy"
+               onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=claude.ai&sz=64'; this.onerror=function(){this.src=\'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>\'}">
           <div class="card-info">
             <div class="card-name">Claude</div>
             <div class="card-desc">AI 助手</div>
@@ -122,8 +126,8 @@
         </a>
         <a class="card" href="https://x.com/i/grok" target="_blank" rel="noopener"
            data-name="grok" data-desc="xai">
-          <img class="favicon" src="https://www.google.com/s2/favicons?domain=x.com&sz=64" alt="" loading="lazy"
-               onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌐</text></svg>'">
+          <img class="favicon" src="https://logo.clearbit.com/x.com" alt="" loading="lazy"
+               onerror="this.onerror=null; this.src='https://www.google.com/s2/favicons?domain=x.com&sz=64'; this.onerror=function(){this.src=\'data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌐</text></svg>\'}">
           <div class="card-info">
             <div class="card-name">Grok</div>
             <div class="card-desc">xAI</div>
@@ -133,7 +137,7 @@
       </section>
     </main>
     <footer>
-      最后更新：2026-09-21 17:31 · 由本地脚本自动生成 ·
+      最后更新：2026-09-21 17:36 · 由本地脚本自动生成 ·
       <a href="https://github.com" target="_blank" rel="noopener">GitHub Pages</a>
     </footer>
   </div>
